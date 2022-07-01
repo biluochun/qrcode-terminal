@@ -1,4 +1,5 @@
-module.exports = {
+// module.exports = {
+var QRMaskPattern = {
 	PATTERN000 : 0,
 	PATTERN001 : 1,
 	PATTERN010 : 2,

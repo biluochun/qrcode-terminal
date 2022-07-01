@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Cross-Browser QRCode generator for Javascript</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+<script type="text/javascript" src="./vendor/QRCode/QRMaskPattern.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRErrorCorrectLevel.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRMath.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRMode.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QR8bitByte.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRUtil.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRPolynomial.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRRSBlock.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/QRBitBuffer.js"></script>
+<script type="text/javascript" src="./vendor/QRCode/index.js"></script>
+<script type="text/javascript" src="./lib/main.js"></script>
+</head>
+<body>
+<input id="text" type="text" value="https://mini.chidaoni.com/m1000021/7/m?id=ppUphIgl" style="width:80%" /><br />
+<div id="qrcode" style="width:200px; height:200px; margin-top:15px;"></div>
+<script type="text/javascript">
+	const elText = document.getElementById("text");
+	const showEl = document.getElementById("qrcode");
+
+	function makeCode () {
+		if (!elText.value) {
+			alert("Input a text");
+			elText.focus();
+			return;
+		}
+		QRCodeSDK.generate(elText.value, {}, (output) => {
+			console.log(output)
+		});
+	}
+
+	makeCode();
+
+	elText.addEventListener('input', (evt) => {
+		makeCode();
+	});
+	elText.onkeydown = (evt) => {
+		const e = evt || window.event;
+		if (e && e.keyCode == 13) makeCode();
+	};
+
+</script>
+</body>

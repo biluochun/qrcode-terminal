@@ -1,4 +1,4 @@
-var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+// var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
 
 function QRRSBlock(totalCount, dataCount) {
 	this.totalCount = totalCount;
@@ -295,4 +295,4 @@ QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
 	}
 };
 
-module.exports = QRRSBlock;
+// module.exports = QRRSBlock;

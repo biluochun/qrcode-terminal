@@ -35,4 +35,4 @@ QRBitBuffer.prototype = {
 	}
 };
 
-module.exports = QRBitBuffer;
+// module.exports = QRBitBuffer;

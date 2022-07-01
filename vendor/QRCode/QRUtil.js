@@ -1,7 +1,7 @@
-var QRMode = require('./QRMode');
-var QRPolynomial = require('./QRPolynomial');
-var QRMath = require('./QRMath');
-var QRMaskPattern = require('./QRMaskPattern');
+// var QRMode = require('./QRMode');
+// var QRPolynomial = require('./QRPolynomial');
+// var QRMath = require('./QRMath');
+// var QRMaskPattern = require('./QRMaskPattern');
 
 var QRUtil = {
 
@@ -269,4 +269,4 @@ var QRUtil = {
 
 };
 
-module.exports = QRUtil;
+// module.exports = QRUtil;
